@@ -492,12 +492,12 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    #define DEFAULT_Kp 15.3321
+    #define DEFAULT_Ki 1.2544
+    #define DEFAULT_Kd 46.8492
   #endif
 #endif // PIDTEMP
-
+ 
 //===========================================================================
 //====================== PID > Bed Temperature Control ======================
 //===========================================================================
@@ -533,9 +533,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 37.53
-  #define DEFAULT_bedKi 5.16
-  #define DEFAULT_bedKd 182.09
+  #define DEFAULT_bedKp 45.1611
+  #define DEFAULT_bedKi 7.2589
+  #define DEFAULT_bedKd 187.3130
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -974,7 +974,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 39, -42, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 39, -42, -2.930 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1110,7 +1110,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 305
+#define X_BED_SIZE 268//305
 #define Y_BED_SIZE 305
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
